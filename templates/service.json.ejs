@@ -1,0 +1,134 @@
+{
+    "meap": {
+    "servicename": "<%- servicename %>",
+        "logstate": true,
+        "cluster": 3,
+        "serviceinfo": "mas service",
+        "interfacedir": "<%- interfacedir %>",
+        "appPolicyPower": 0,
+        "ifPolicyPower": 0,
+        "counterPower": 0,
+        "cookie": {
+             "host": "127.0.0.1",
+            "port": "6378",
+            "authpass": "",
+            "password":"",
+            "db": "1"
+    },
+    "cache": {
+            "host": "127.0.0.1",
+            "port": "6378",
+            "authpass": "",
+            "password":"",
+            "db": "1"
+    },
+    "authpool": {
+        "host": "127.0.0.1",
+        "port": "6378",
+        "authpass": "",
+        "password":"",
+        "db": "2"
+    },
+    "log": {
+           "power": "0",
+            "host": "127.0.0.1",
+            "port": "6378",
+            "authpass": "",
+            "password":"",
+            "db": "3"
+    },
+    "counterMonitor": {
+          "host": "127.0.0.1",
+           "port": "6378",
+            "authpass": "",
+            "password":"",
+            "db": "2"
+    },
+    "msgMonitor": {
+        "host": "192.168.40.103",
+            "port": "6378",
+            "authpass": "",
+            "password":"",
+            "db": "0"
+    },
+    "sessionpool": {
+        "switch": false,
+            "running": "300",
+            "waiting": "300",
+            "timeout": "30"
+    },
+
+    "threshold": {
+        "hour": "0",
+            "day": "0",
+            "minute": "0"
+    },
+    "services": [
+        {
+            "name": "mobile_adapter_service",
+            "port": 8060,
+            "protocal": "HTTP",
+            "certificate": {
+                "key": "",
+                "cert": ""
+            },
+            "secure": false,
+            "auth": {
+                "type": "ssl",
+                "ca": ""
+            },
+            "timeout": "60",
+            "subservicename": ""
+        }
+    ],
+        "projects": [
+        "<%- servicename %>"
+    ],
+        "appValidTime": 600,
+        "globalmonitorchannel": "globalmonitorchannel",
+        "useSentinel": "0",
+        "jdbcDriveConf": {
+        "oracle11g": {
+            "数据源英文名称": {
+                "javaExtEnName": "数据源英文名称",
+                    "drivername": "oracle.jdbc.driver.OracleDriver",
+                    "jdbcHost": "jdbcHost",
+                    "jdbcPort": "jdbcPort",
+                    "jdbcDatabase": "jdbcDatabase",
+                    "jdbcUser": "jdbcUser",
+                    "jdbcPass": "jdbcPass"
+            }
+        },
+        "mysql": {
+            "dataSource1": {
+                    "jdbcHost": "127.0.0.1",
+                    "jdbcPort": "3306",
+                    "jdbcDatabase": "table1",
+                    "jdbcUser": "",
+                    "jdbcPass": ""
+            },
+            "dataSource2": {
+                    "jdbcHost": "127.0.0.1",
+                    "jdbcPort": "3306",
+                    "jdbcDatabase": "table2",
+                    "jdbcUser": "",
+                    "jdbcPass": ""
+            }
+        }
+    },
+    "jdbcDrive": [
+        {
+            "jdbcName": "mysql",
+            "dataSource": "dataSource1"
+        },
+        {
+            "jdbcName": "mysql",
+            "dataSource": "dataSource2"
+        }
+    ],
+        "logStatus": 1,
+        "appApproveStatus": 1,
+        "ifApproveStatus": 1,
+        "fullgoalEnvFlag": 2
+}
+}
